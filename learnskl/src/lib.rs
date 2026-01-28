@@ -186,7 +186,7 @@ pub fn classchange_clearandaddlearnskills(this: &UnitGrowSequence, method_info: 
         let start_bytes_0 = old_start_bytes.unwrap() + old_jid.len();
         let end_bytes = new_learn_skills[start_bytes_0..].find("END");
         if end_bytes.is_none() {return};
-        let end_bytes_0 = end_bytes.unwrap() + old_jid.len();
+        let end_bytes_0 = end_bytes.unwrap() + start_bytes_0;
         let job_learn_skills = &new_learn_skills[start_bytes_0..end_bytes_0];
 
         let mut current_level = unit.level;
