@@ -1,0 +1,23 @@
+[package]
+name = "equipskl"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[package.metadata.skyline]
+titleid = "0100a6301214e000" # Fire Emblem Engage
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+skyline = "0.3.0"
+engage = { git = "https://github.com/DivineDragonFanClub/engage" }
+unity = { git = "https://github.com/DivineDragonFanClub/unity" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
